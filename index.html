@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Create Table</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<style>
+			#select {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3 class="clearfix">LeeYaMaster BootStrap Table生成器
+<button class="btn btn-warning pull-right btn-sm" onclick="createExcel()">导出Excel</button>
+<button class="btn btn-info pull-right btn-sm" onclick="createHTML()">导出HTML</button>
+<button class="btn btn-success pull-right btn-sm" data-toggle="modal"
+     data-target="#TableModal">添加表格</button>
+</h3>
+		<hr class="feature-divider" />
+		<div id="TableView">
+
+		</div>
+
+		<!-- 关于 -->
+		<div class="modal fade" id="TableModal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+						<h4 class="modal-title" id="modal-label">表格创建</h4>
+					</div>
+					<div class="modal-body">
+						<label>行:</label>
+						<input class="form-control" type="number" id="row">
+						<label>列:</label>
+						<input class="form-control" type="number" id="col">
+						<select class="form-control" id="select">
+							<option value="0">基本表格</option>
+							<option value="1">条纹表格</option>
+							<option value="2">边框表格</option>
+							<option value="3">悬停表格</option>
+							<option value="4">紧缩表格</option>
+						</select>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" onclick="addtable()">创建</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--生成的HTML-->
+		<div class="modal fade" id="myTableHTML" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+						<h4 class="modal-title" id="modal-label">HTML代码</h4>
+					</div>
+					<div class="modal-body" id="HTMLtext">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">知道了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.2.0.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/FileSaver.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/MyTable.js"></script>
+	</body>
+
+</html>
